@@ -1,7 +1,12 @@
 
 import { Route, Routes } from 'react-router-dom';
 import './App.css';
+import AddInventory from './Pages/AddInventory/AddInventory';
+import Blogs from './Pages/Blogs/Blogs';
 import Home from './Pages/Home/Home';
+import InventoryDetails from './Pages/InventoryDetails/InventoryDetails';
+import ManageInventory from './Pages/ManageInventory/ManageInventory';
+import MyItem from './Pages/MyItem/MyItem';
 import NotFound from './Pages/NotFound/NotFound';
 import Footer from './Pages/Shared/Footer/Footer';
 import Header from './Pages/Shared/Header/Header';
@@ -14,6 +19,11 @@ function App() {
       <Routes>
         <Route path="/" element={<Home></Home>}></Route>
         <Route path="/home" element={<Home></Home>}></Route>
+        <Route path="/add" element={<AddInventory></AddInventory>}></Route>
+        <Route path="/manage" element={<ManageInventory></ManageInventory>}></Route>
+        <Route path="/details" element={<InventoryDetails></InventoryDetails>}></Route>
+        <Route path="/myItem" element={<MyItem></MyItem>}></Route>
+        <Route path="/blogs" element={<Blogs></Blogs>}></Route>
         <Route path="*" element={<NotFound></NotFound>}></Route>
       </Routes>
       <Footer></Footer>
