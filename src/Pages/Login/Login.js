@@ -1,10 +1,22 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
+import { useSignInWithEmailAndPassword, useSignInWithGoogle } from 'react-firebase-hooks/auth';
+import { Link, useNavigate } from 'react-router-dom';
+import auth from '../../firebase.init';
 
 const Login = () => {
+    const navigate = useNavigate();
+    const [signInWithGoogle, loading, error] = useSignInWithGoogle(auth);
+    const [signInWithEmailAndPassword, user] = useSignInWithEmailAndPassword(auth);
 
     const handleLogin = e => {
         e.preventDefault();
+        const email = e.target.email.value;
+        const password = e.target.password.value;
+        console.log(email, password);
+        signInWithEmailAndPassword(email, password)
+    }
+    if (user) {
+        navigate('/');
     }
     return (
         <div className='w-50 mx-auto'>
@@ -29,6 +41,7 @@ const Login = () => {
                     <hr />
                 </div>
             </div>
+            <input className='mb-5' onClick={() => signInWithGoogle()} type="button" value="Sign in with Google" />
 
 
         </div >

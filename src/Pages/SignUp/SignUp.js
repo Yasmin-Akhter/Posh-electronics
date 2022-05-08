@@ -1,18 +1,41 @@
-import React from 'react';
-import { Link } from 'react-router-dom';
+import React, { useState } from 'react';
+import { Link, useNavigate } from 'react-router-dom';
+import { useCreateUserWithEmailAndPassword } from 'react-firebase-hooks/auth';
+import auth from '../../firebase.init';
 
 const SignUp = () => {
-    let errorMsg;
+    const navigate = useNavigate();
+    const [error, setError] = useState('');
+    const [
+        createUserWithEmailAndPassword,
+        user,
+        loading,
+
+    ] = useCreateUserWithEmailAndPassword(auth);
+
+
     const handleSignup = e => {
         e.preventDefault();
+        const email = e.target.email.value;
         const pass = e.target.password.value;
         const confirmPass = e.target.confirmPassword.value;
         console.log(pass, confirmPass);
 
+        createUserWithEmailAndPassword(email, pass);
+
+        if (pass.length < 6) {
+            setError('X Password must be more then six digit X')
+        }
         if (pass !== confirmPass) {
-            errorMsg = 'Password and confirm password must be same';
+            setError(' X Password and confirm password must be same X');
         }
     }
+    if (user) {
+        navigate('/');
+    }
+
+
+
 
     return (
         <div>
@@ -25,7 +48,9 @@ const SignUp = () => {
 
                 <input className='mb-2' type="password" name='confirmPassword' placeholder='Confirm Password' required />
                 <br />
-                {errorMsg}
+                <div className='text-danger'>
+                    {error} <br />
+                </div>
                 <input className='mb-2' type="submit" value="Submit" />
             </form>
             <p>Already have an account? <span><Link to="/login">Login </Link></span></p>
