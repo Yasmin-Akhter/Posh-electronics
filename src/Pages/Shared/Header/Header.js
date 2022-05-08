@@ -10,18 +10,19 @@ const Header = () => {
 
             <Navbar collapseOnSelect expand="lg" >
                 <Container>
-                    <Navbar.Brand href="#home" className='text-white'>Posh-Electronics</Navbar.Brand>
+                    <Nav.Link as={Link} to="/" className='text-white'>Posh-Electronics</Nav.Link>
+                    <Nav.Link as={Link} to="/" className='text-white'>Home</Nav.Link>
                     <Navbar.Toggle aria-controls="responsive-navbar-nav" />
                     <Navbar.Collapse id="responsive-navbar-nav">
                         <Nav className="me-auto">
 
                         </Nav>
                         <Nav>
-                            <Nav.Link href="#features" className='text-white'>Features</Nav.Link>
-                            <Nav.Link href="#pricing" className='text-white'>Pricing</Nav.Link>
+                            <Nav.Link as={Link} to="features" className='text-white'>Features</Nav.Link>
+                            <Nav.Link as={Link} to="pricing" className='text-white'>Pricing</Nav.Link>
 
-                            <Nav.Link href="#deets" className='text-white'>More deets</Nav.Link>
-                            <Nav.Link eventKey={2} href="#memes" className='text-white'>
+                            <Nav.Link as={Link} to="deets" className='text-white'>More deets</Nav.Link>
+                            <Nav.Link as={Link} eventKey={2} to="memes" className='text-white'>
                                 Dank memes
                             </Nav.Link>
                         </Nav>

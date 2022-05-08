@@ -10,6 +10,9 @@ import MyItem from './Pages/MyItem/MyItem';
 import NotFound from './Pages/NotFound/NotFound';
 import Footer from './Pages/Shared/Footer/Footer';
 import Header from './Pages/Shared/Header/Header';
+import auth from './firebase.init';
+import RequireAuth from './Pages/RequireAuth/RequireAuth';
+import Update from './Pages/Update/Update';
 
 
 function App() {
@@ -21,7 +24,11 @@ function App() {
         <Route path="/home" element={<Home></Home>}></Route>
         <Route path="/add" element={<AddInventory></AddInventory>}></Route>
         <Route path="/manage" element={<ManageInventory></ManageInventory>}></Route>
-        <Route path="/details" element={<InventoryDetails></InventoryDetails>}></Route>
+        <Route path="/details/:id" element={
+          <InventoryDetails></InventoryDetails>
+        }>
+
+        </Route>
         <Route path="/myItem" element={<MyItem></MyItem>}></Route>
         <Route path="/blogs" element={<Blogs></Blogs>}></Route>
         <Route path="*" element={<NotFound></NotFound>}></Route>

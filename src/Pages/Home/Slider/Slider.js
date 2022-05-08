@@ -8,37 +8,37 @@ const Slider = () => {
             <Carousel fade >
                 <Carousel.Item>
                     <img style={{ height: '400px' }}
-                        className="d-block w-75 mx-auto"
-                        src="https://www.pngitem.com/pimgs/m/61-612916_transparent-home-appliances-png-home-appliances-png-png.png"
+                        className="d-block mx-auto "
+                        src="https://png.pngtree.com/thumb_back/fh260/back_our/20190620/ourmid/pngtree-99-household-appliances-big-promotion-carnival-blue-banner-image_166711.jpg"
                         alt="First slide"
                     />
                     <Carousel.Caption>
                         <h1 className='slider-title'>Welcome to Posh Electronics</h1>
-                        <p>Nulla vitae elit libero, a pharetra augue mollis interdum.</p>
+                        <p className='text-black'>We are here to make your lifestyle posh</p>
                     </Carousel.Caption>
                 </Carousel.Item>
                 <Carousel.Item>
                     <img style={{ height: '400px' }}
-                        className="d-block w-75 mx-auto"
-                        src="https://www.nicepng.com/png/detail/182-1826831_home-appliances-png-picture-electronic-home-appliances-png.png"
+                        className="d-block mx-auto"
+                        src="https://cdn.risingbd.com/media/imgAll/2017January/bg/Walton-Home-Appliances20170112095505.jpg"
                         alt="Second slide"
                     />
 
                     <Carousel.Caption>
                         <h1 className='slider-title'>Welcome to Posh Electronics</h1>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                        <p className='text-black'>We are here to make your lifestyle posh</p>
                     </Carousel.Caption>
                 </Carousel.Item>
                 <Carousel.Item>
                     <img style={{ height: '400px' }}
-                        className="d-block w-75 mx-auto"
-                        src="https://www.kindpng.com/picc/m/218-2181525_transparent-home-appliances-png-png-download.png"
+                        className="d-blockmx-auto"
+                        src="https://www.pngitem.com/pimgs/m/564-5645524_transparent-electronics-home-appliance-transparent-home-appliances-png.png"
                         alt="Third slide"
                     />
 
                     <Carousel.Caption>
                         <h1 className='slider-title'>Welcome to Posh Electronics</h1>
-                        <p>We are here to make your lifestyle posh </p>
+                        <p className='text-black'>We are here to make your lifestyle posh </p>
                     </Carousel.Caption>
                 </Carousel.Item>
             </Carousel>
