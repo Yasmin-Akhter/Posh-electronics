@@ -22,14 +22,15 @@ const Header = () => {
 
                         </Nav>
                         <Nav>
-                            <Nav.Link as={Link} to="features" className='text-white'>Features</Nav.Link>
+                            <Nav.Link as={Link} to="/blogs" className='text-white'>Blogs</Nav.Link>
 
                             {
                                 user && <div className='d-flex'>
-                                    <Nav.Link as={Link} to="pricing" className='text-white'>Pricing</Nav.Link>
-                                    <Nav.Link as={Link} eventKey={2} to="memes" className='text-white'>
-                                        Dank memes
+                                    <Nav.Link as={Link} to="/manage" className='text-white'>Manage item</Nav.Link>
+                                    <Nav.Link as={Link} eventKey={2} to="/add" className='text-white'>
+                                        Add item
                                     </Nav.Link>
+                                    <Nav.Link as={Link} to="/myItem" className='text-white'>My Item</Nav.Link>
                                 </div>
                             }
                             {

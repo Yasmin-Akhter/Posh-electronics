@@ -1,9 +1,13 @@
 import React, { useState } from 'react';
 import { Link, useNavigate } from 'react-router-dom';
-import { useCreateUserWithEmailAndPassword } from 'react-firebase-hooks/auth';
+import { useCreateUserWithEmailAndPassword, useSendEmailVerification } from 'react-firebase-hooks/auth';
 import auth from '../../firebase.init';
 
+
+
 const SignUp = () => {
+    const [sendEmailVerification, sending] = useSendEmailVerification(
+        auth);
     const navigate = useNavigate();
     const [error, setError] = useState('');
     const [
@@ -23,12 +27,14 @@ const SignUp = () => {
 
         createUserWithEmailAndPassword(email, pass);
 
+
         if (pass.length < 6) {
             setError('X Password must be more then six digit X')
         }
         if (pass !== confirmPass) {
             setError(' X Password and confirm password must be same X');
         }
+        e.target.reset();
     }
     if (user) {
         navigate('/');
