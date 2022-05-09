@@ -2,6 +2,8 @@ import React, { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
 import Slider from './Slider/Slider';
 import './Home.css'
+import CustomerBenefit from '../CustomerBenefit/CustomerBenefit';
+import DiscountOffer from '../DiscountOffer/DiscountOffer';
 
 const Home = () => {
     const [products, setProducts] = useState([]);
@@ -34,7 +36,12 @@ const Home = () => {
                 }
             </div>
 
+
+
             <Link to="/manage"><button style={{ borderRadius: '30px' }} className='my-4 border-0'>Manage Inventory</button></Link>
+
+            <CustomerBenefit></CustomerBenefit>
+            <DiscountOffer></DiscountOffer>
         </div >
     );
 };

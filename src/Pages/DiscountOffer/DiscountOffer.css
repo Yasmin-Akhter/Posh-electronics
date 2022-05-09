@@ -1,0 +1,12 @@
+.discount {
+    background-image: url('https://img.freepik.com/free-vector/blue-speed-comic-style-background_23-2148820924.jpg?w=2000');
+
+
+}
+
+
+.discount img {
+    box-shadow: 2px 2px 2px gray;
+    padding: 60px;
+    border-radius: 20px;
+}
