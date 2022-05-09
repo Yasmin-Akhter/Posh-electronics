@@ -6,7 +6,7 @@ const InventoryDetails = () => {
     console.log(id);
     const [update, setUpdate] = useState({});
     useEffect(() => {
-        const url = `http://localhost:5000/product/${id}`
+        const url = `https://afternoon-cove-01643.herokuapp.com/product/${id}`
         fetch(url)
             .then(res => res.json())
             .then(data => setUpdate(data))
@@ -23,13 +23,13 @@ const InventoryDetails = () => {
 
         console.log(restock);
 
-        const url = `http://localhost:5000/user/${id}`;
+        const url = `https://afternoon-cove-01643.herokuapp.com/product/${id}`;
         fetch(url, {
             method: 'PUT',
             headers: {
                 'Content-Type': 'application/json',
             },
-            body: JSON.stringify(update),
+            body: JSON.stringify(restock),
 
         })
             .then(response => response.json())

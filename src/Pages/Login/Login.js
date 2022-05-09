@@ -21,17 +21,18 @@ const Login = () => {
     const handleLogin = e => {
         e.preventDefault();
         const email = e.target.email.value;
-
+        setEmail(email);
         const password = e.target.password.value;
         console.log(email, password);
         signInWithEmailAndPassword(email, password)
-        setEmail(email);
-        toast('signing in');
+
         e.target.reset();
+
     }
     const handlePasswordReset = () => {
         sendPasswordResetEmail(email);
         toast('Sent email');
+        console.log(email);
 
     }
 

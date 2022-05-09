@@ -6,7 +6,7 @@ const ManageInventory = () => {
     const [products, setProducts] = useState([]);
     useEffect(() => {
 
-        fetch("http://localhost:5000/product")
+        fetch("https://afternoon-cove-01643.herokuapp.com/product")
             .then(res => res.json())
             .then(data => {
                 setProducts(data);
@@ -17,7 +17,7 @@ const ManageInventory = () => {
         console.log(id);
         const proceed = window.confirm('Are you sure want to delete? ');
         if (proceed) {
-            const url = `http://localhost:5000/product/${id}`
+            const url = `https://afternoon-cove-01643.herokuapp.com/product/${id}`
 
             fetch(url, {
                 method: 'DELETE',
