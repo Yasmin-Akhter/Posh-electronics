@@ -1,5 +1,8 @@
 import React, { useEffect, useState } from 'react';
 import { Link, useParams } from 'react-router-dom';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faDeleteLeft, faFileWord, faHand, faPerson, faTruck } from '@fortawesome/free-solid-svg-icons'
+
 
 const ManageInventory = () => {
     const { id } = useParams();
@@ -44,10 +47,10 @@ const ManageInventory = () => {
             {
                 products.map(product => <div className=' w-50 mx-auto d-flex align-items-center justify-content-evenly border border-2 mb-3' key={product._id}>
 
-                    <img style={{ height: "80px", width: "80px" }} src={product.image} alt="" />
+                    <img style={{ height: "60px", width: "70px" }} src={product.image} alt="" />
                     <h5>{product.name}</h5>
                     <h6>TK.{product.price}</h6>
-                    <button onClick={() => handleDelete(product._id)}>Delete</button>
+                    <button style={{ boxShadow: '1px 1px 1px grey' }} className='border-0' onClick={() => handleDelete(product._id)}><FontAwesomeIcon icon={faDeleteLeft} style={{ color: 'red' }}></FontAwesomeIcon> Delete</button>
 
 
                 </div>)

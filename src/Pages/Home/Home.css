@@ -1,6 +1,7 @@
 .container {
     /* background-color: lightyellow; */
 
+
 }
 
 .inventoryHome {
@@ -12,13 +13,23 @@
 }
 
 .product-card {
-    background-color: burlywood;
-    border-radius: 20px;
+    /* background-color: burlywood; */
+    border-radius: 10px;
+    box-shadow: 2px 2px 2px grey;
+    height: 500px;
+    width: 300px;
+}
+
+.product-card img {
     box-shadow: 2px 2px 2px grey;
 }
 
 link button {
     border-radius: 30px;
+}
+
+.product-card img:hover {
+    box-shadow: 2px 2px 5px grey;
 }
 
 @media screen and (max-width: 600px) {

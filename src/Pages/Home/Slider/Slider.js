@@ -7,9 +7,9 @@ const Slider = () => {
         <div>
             <Carousel fade >
                 <Carousel.Item>
-                    <img style={{ height: '400px' }}
+                    <img style={{ height: '500px', width: '1066px' }}
                         className="d-block mx-auto "
-                        src="https://png.pngtree.com/thumb_back/fh260/back_our/20190620/ourmid/pngtree-99-household-appliances-big-promotion-carnival-blue-banner-image_166711.jpg"
+                        src="https://ao.com/~/media/Content-Hub/Brand-shops/Samsung/SamsungLaundryHeader.ashx"
                         alt="First slide"
                     />
                     <Carousel.Caption>
@@ -18,9 +18,9 @@ const Slider = () => {
                     </Carousel.Caption>
                 </Carousel.Item>
                 <Carousel.Item>
-                    <img style={{ height: '400px' }}
+                    <img style={{ height: '500px', width: '1066px' }}
                         className="d-block mx-auto"
-                        src="https://cdn.risingbd.com/media/imgAll/2017January/bg/Walton-Home-Appliances20170112095505.jpg"
+                        src="https://reviewed-com-res.cloudinary.com/image/fetch/s--Qd48D7_9--/b_white,c_limit,cs_srgb,f_auto,fl_progressive.strip_profile,g_center,q_auto,w_1200/https://reviewed-production.s3.amazonaws.com/1567525241382/titanium-electrolux-front-load-washers-efls527utt-77_1000.jpg"
                         alt="Second slide"
                     />
 
@@ -30,9 +30,9 @@ const Slider = () => {
                     </Carousel.Caption>
                 </Carousel.Item>
                 <Carousel.Item>
-                    <img style={{ height: '400px' }}
+                    <img style={{ height: '500px', width: '1066px' }}
                         className="d-blockmx-auto"
-                        src="https://www.pngitem.com/pimgs/m/564-5645524_transparent-electronics-home-appliance-transparent-home-appliances-png.png"
+                        src="https://images.samsung.com/is/image/samsung/p5/nz/samsung-care/samsung-care-washing-mob.jpg?$ORIGIN_JPG$"
                         alt="Third slide"
                     />
 
