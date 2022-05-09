@@ -29,7 +29,7 @@ const Home = () => {
                         <h5>{product.name}</h5>
                         <p>{product.description}</p>
                         <p>TK.{product.price}</p>
-                        <p>Quantity:{product.quantity}</p>
+                        <p>Quantity:{product.quantity}, supplier name:{product.supplierName}</p>
                         <Link to={`/details/${product._id}`}><button className='mb-2 rounded-pill px-3 border-0'>Details</button></Link>
                     </div>)
 

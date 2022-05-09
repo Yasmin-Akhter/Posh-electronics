@@ -8,12 +8,13 @@ const AddInventory = () => {
 
         e.preventDefault();
         const name = e.target.name.value;
+        const supplierName = e.target.supplierName.value;
         const description = e.target.description.value;
         const price = e.target.price.value;
         const quantity = e.target.quantity.value;
         const image = e.target.image.value;
 
-        const product = { name, description, price, quantity, image };
+        const product = { name, supplierName, description, price, quantity, image };
         e.target.reset();
         console.log(product);
 
@@ -43,6 +44,9 @@ const AddInventory = () => {
             <Form onSubmit={handleAdd}>
                 <Form.Group className="mb-3" controlId="formBasicName">
                     <Form.Control type="text" name='name' placeholder="Enter Name" />
+                </Form.Group>
+                <Form.Group className="mb-3" controlId="formBasicSupplierName">
+                    <Form.Control type="text" name='supplierName' placeholder="Enter Supplier Name" />
                 </Form.Group>
                 <Form.Group className="mb-3" controlId="formBasicDescription">
                     <Form.Control type="text area" name='description' placeholder="Description"

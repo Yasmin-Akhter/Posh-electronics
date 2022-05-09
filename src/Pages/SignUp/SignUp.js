@@ -2,6 +2,8 @@ import React, { useState } from 'react';
 import { Link, useNavigate } from 'react-router-dom';
 import { useCreateUserWithEmailAndPassword, useSendEmailVerification } from 'react-firebase-hooks/auth';
 import auth from '../../firebase.init';
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
 
 
@@ -15,7 +17,7 @@ const SignUp = () => {
         user,
         loading,
 
-    ] = useCreateUserWithEmailAndPassword(auth);
+    ] = useCreateUserWithEmailAndPassword(auth, { sendEmailVerification: true });
 
 
     const handleSignup = e => {
@@ -26,6 +28,8 @@ const SignUp = () => {
         console.log(pass, confirmPass);
 
         createUserWithEmailAndPassword(email, pass);
+        toast('email sent');
+
 
 
         if (pass.length < 6) {
@@ -60,6 +64,7 @@ const SignUp = () => {
                 <input className='mb-2' type="submit" value="Submit" />
             </form>
             <p>Already have an account? <span><Link to="/login">Login </Link></span></p>
+            <ToastContainer />
         </div>
     );
 };
