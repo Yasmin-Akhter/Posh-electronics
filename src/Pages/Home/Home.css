@@ -1,14 +1,24 @@
+.container {
+    /* background-color: lightyellow; */
+
+}
+
 .inventoryHome {
 
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     gap: 10px;
+
 }
 
 .product-card {
     background-color: burlywood;
     border-radius: 20px;
     box-shadow: 2px 2px 2px grey;
+}
+
+link button {
+    border-radius: 30px;
 }
 
 @media screen and (max-width: 600px) {

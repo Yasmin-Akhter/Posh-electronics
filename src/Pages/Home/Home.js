@@ -28,13 +28,13 @@ const Home = () => {
                         <p>{product.description}</p>
                         <p>TK.{product.price}</p>
                         <p>Quantity:{product.quantity}</p>
-                        <Link to={`/details/${product._id}`}><button className='mb-2'>Delete</button></Link>
+                        <Link to={`/details/${product._id}`}><button className='mb-2 rounded-pill px-3 border-0'>Details</button></Link>
                     </div>)
 
                 }
             </div>
 
-            <Link to="/manage"><button className='my-4'>Manage Inventory</button></Link>
+            <Link to="/manage"><button style={{ borderRadius: '30px' }} className='my-4 border-0'>Manage Inventory</button></Link>
         </div >
     );
 };

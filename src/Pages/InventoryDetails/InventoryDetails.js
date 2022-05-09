@@ -20,10 +20,25 @@ const InventoryDetails = () => {
         e.preventDefault();
 
         const restock = e.target.restock.value;
+
         console.log(restock);
 
+        const url = `http://localhost:5000/user/${id}`;
+        fetch(url, {
+            method: 'PUT',
+            headers: {
+                'Content-Type': 'application/json',
+            },
+            body: JSON.stringify(update),
 
-        e.target.reset();
+        })
+            .then(response => response.json())
+            .then(data => {
+                console.log('Success:', data);
+                alert('Product updated successfully!!!');
+                e.target.reset();
+            })
+
 
     }
 
