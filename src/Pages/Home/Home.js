@@ -28,7 +28,7 @@ const Home = () => {
                         <p>{product.description}</p>
                         <p>TK.{product.price}</p>
                         <p>Quantity:{product.quantity}</p>
-                        <Link to="/details/:id"><button className='mb-2'>Delete</button></Link>
+                        <Link to={`/details/${product._id}`}><button className='mb-2'>Delete</button></Link>
                     </div>)
 
                 }
