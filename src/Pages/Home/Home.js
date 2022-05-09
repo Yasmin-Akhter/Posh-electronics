@@ -4,6 +4,7 @@ import Slider from './Slider/Slider';
 import './Home.css'
 import CustomerBenefit from '../CustomerBenefit/CustomerBenefit';
 import DiscountOffer from '../DiscountOffer/DiscountOffer';
+import InventoryDetails from '../InventoryDetails/InventoryDetails';
 
 const Home = () => {
     const [products, setProducts] = useState([]);
@@ -34,6 +35,7 @@ const Home = () => {
                     </div>)
 
                 }
+
             </div>
 
 

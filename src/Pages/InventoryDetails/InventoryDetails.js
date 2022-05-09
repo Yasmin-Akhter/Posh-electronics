@@ -19,6 +19,7 @@ const InventoryDetails = () => {
     const handleRestock = (e) => {
         e.preventDefault();
 
+
         const restock = e.target.restock.value;
 
         console.log(restock);
